@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-List<GuestBookVo> list = new GuestBookDao().findAll();
+	List<GuestBookVo> list = (List<GuestBookVo>) request.getAttribute("list");
 %>
 <html>
 <head>
@@ -12,7 +12,8 @@ List<GuestBookVo> list = new GuestBookDao().findAll();
 <title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook01/add.jsp" method="post">
+	<form action="/guestbook02/gb" method="post">
+	<input type="hidden" name="a" value="add" >
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -30,15 +31,15 @@ List<GuestBookVo> list = new GuestBookDao().findAll();
 	
 	<%
 		int i = 1;
-				for (GuestBookVo vo: list) {
-		%>
+			for (GuestBookVo vo: list) {
+	%>
 		<br>
 		<table width=510 border=1>
 			<tr>
 				<td>[<%=i %>]</td>
 				<td><%=vo.getName() %></td>
 				<td><%=vo.getRegDate() %></td>
-				<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
+				<td><a href="/guestbook02/gb?a=deleteform&no=<%=vo.getNo() %>">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4><%=vo.getMessage() %></td>
