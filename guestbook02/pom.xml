@@ -5,7 +5,7 @@
     <artifactId>servlet-practice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>helloweb</artifactId>
+  <artifactId>guestbook02</artifactId>
   <packaging>war</packaging>
   
   <properties>
@@ -38,7 +38,7 @@
   </dependencies>
   
   <build>
-		<finalName>helloweb</finalName>
+		<finalName>guestbook02</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
