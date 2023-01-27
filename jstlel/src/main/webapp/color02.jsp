@@ -7,9 +7,6 @@
 	url에서 ?color=~ 로 들어온 파라미터를 받아온다.
 	param.color로 얻어올 수 있음
 -->
-<%
-	String color = request.getParameter("color");
-%>
 <!DOCTYPE html>
 <html>
 <head>

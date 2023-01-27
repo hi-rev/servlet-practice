@@ -13,6 +13,7 @@
 	<c:set var="row" value="${param.r }" />
 	<c:set var="col" value="${param.c }" />
 	
+	<!-- row나 col이 넘어오지 않았다면 값을 3으로 설정 -->
 	<c:if test="${empty row}">
 		<c:set var="row" value="3" />
 	</c:if>
