@@ -1,11 +1,11 @@
-﻿<!-- welcome page -->
+<!-- welcome page -->
 <%@ page import="com.douzone.emaillist.vo.EmaillistVo"%>
 <%@ page import="java.util.List"%>
 <%@ page import="com.douzone.emaillist.dao.EmaillistDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	List<EmaillistVo> list = new EmaillistDao().findAll();
+List<EmaillistVo> list = new EmaillistDao().findAll();
 %>
 <html>
 <head>
